@@ -70,6 +70,7 @@ const prices = [
     days: "3 дня",
     title: "Начало пути",
     price: "300 000",
+    url: "https://watbot.ru/w/B3pT",
     features: [
       "Детокс от гаджетов и шума",
       "Дыхательные практики",
@@ -86,6 +87,7 @@ const prices = [
     days: "5 дней",
     title: "Трансформация",
     price: "500 000",
+    url: "https://watbot.ru/w/B3pV",
     features: [
       "Всё из 3-дневного формата",
       "День тишины (24 часа)",
@@ -102,6 +104,7 @@ const prices = [
     days: "7 дней",
     title: "Полное возвращение",
     price: "700 000",
+    url: "https://watbot.ru/w/B3pW",
     features: [
       "Всё из 5-дневного формата",
       "День выживания (без еды и воды)",
@@ -734,9 +737,10 @@ export default function Index() {
                   <div className="tag-label mb-1" style={{ color: "#5a9e72" }}>Бонус</div>
                   <p className="font-body text-xs" style={{ color: "#888075" }}>{plan.bonus}</p>
                 </div>
-                <button className={plan.highlight ? "btn-gold w-full" : "btn-outline-gold w-full"}>
+                <a href={plan.url} target="_blank" rel="noopener noreferrer"
+                  className={plan.highlight ? "btn-gold w-full text-center block" : "btn-outline-gold w-full text-center block"}>
                   Забронировать
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -796,7 +800,7 @@ export default function Index() {
             Свободных мест остаётся меньше с каждым днём. Оставьте заявку — мы позвоним в течение 24 часов.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal">
-            <button className="btn-gold">Оставить заявку</button>
+            <a href="https://watbot.ru/w/B3pV" target="_blank" rel="noopener noreferrer" className="btn-gold">Оставить заявку</a>
             <button onClick={() => scrollTo("prices")} className="btn-outline-gold">Посмотреть цены</button>
           </div>
           <div className="mt-16 flex flex-wrap justify-center gap-8 reveal">
