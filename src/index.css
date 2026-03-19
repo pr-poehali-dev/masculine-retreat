@@ -41,6 +41,12 @@
     --obsidian: #0d0d0d;
     --cream: #f0ebe0;
     --smoke: #888075;
+    --forest: #3d6b4f;
+    --forest-light: #5a9e72;
+    --forest-dim: rgba(61, 107, 79, 0.18);
+    --teal: #2d8e8e;
+    --teal-light: #4ab8b8;
+    --teal-dim: rgba(45, 142, 142, 0.18);
   }
 }
 
@@ -65,13 +71,16 @@
   h2,
   h3,
   h4 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: -0.01em;
   }
 
   .font-body {
@@ -81,19 +90,22 @@
   .text-gold {
     color: #c9a84c;
   }
-
   .text-cream {
     color: #f0ebe0;
   }
-
   .text-smoke {
     color: #888075;
+  }
+  .text-forest {
+    color: #5a9e72;
+  }
+  .text-teal {
+    color: #4ab8b8;
   }
 
   .bg-obsidian {
     background-color: #0d0d0d;
   }
-
   .bg-stone {
     background-color: #2a2520;
   }
@@ -101,7 +113,6 @@
   .border-gold {
     border-color: #c9a84c;
   }
-
   .border-gold-dim {
     border-color: rgba(201, 168, 76, 0.3);
   }
@@ -112,6 +123,13 @@
 
   .gold-text-gradient {
     background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 60%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .teal-text-gradient {
+    background: linear-gradient(135deg, #2d8e8e 0%, #4ab8b8 60%, #2d8e8e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -148,11 +166,21 @@
     background: rgba(255, 255, 255, 0.05);
   }
 
+  .card-forest {
+    background: rgba(61, 107, 79, 0.07);
+    border: 1px solid rgba(61, 107, 79, 0.25);
+  }
+
+  .card-teal {
+    background: rgba(45, 142, 142, 0.07);
+    border: 1px solid rgba(45, 142, 142, 0.25);
+  }
+
   .btn-gold {
     background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #c9a84c 100%);
     color: #0d0d0d;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -171,7 +199,7 @@
     background: transparent;
     color: #c9a84c;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -204,11 +232,11 @@
   }
 
   .number-xl {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Oswald", sans-serif;
     font-size: clamp(3rem, 8vw, 7rem);
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1;
-    color: rgba(201, 168, 76, 0.15);
+    color: rgba(201, 168, 76, 0.12);
   }
 
   .tag-label {
@@ -217,6 +245,75 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: #c9a84c;
+  }
+
+  .stat-big {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  /* Floating leaf animations */
+  @keyframes floatLeaf {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.6;
+    }
+    33% {
+      transform: translateY(-18px) rotate(8deg);
+      opacity: 0.9;
+    }
+    66% {
+      transform: translateY(-8px) rotate(-5deg);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes floatLeaf2 {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateY(-22px) rotate(-10deg);
+      opacity: 0.8;
+    }
+  }
+
+  .leaf-float {
+    animation: floatLeaf 6s ease-in-out infinite;
+  }
+  .leaf-float-2 {
+    animation: floatLeaf2 8s ease-in-out infinite;
+  }
+  .leaf-float-3 {
+    animation: floatLeaf 10s ease-in-out infinite 2s;
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+  .ripple-ring {
+    animation: ripple 2.5s ease-out infinite;
+  }
+
+  .ripple-ring-2 {
+    animation: ripple 2.5s ease-out infinite 0.8s;
+  }
+
+  .ripple-ring-3 {
+    animation: ripple 2.5s ease-out infinite 1.6s;
   }
 }
 
