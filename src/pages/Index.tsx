@@ -69,7 +69,7 @@ const prices = [
   {
     days: "3 дня",
     title: "Начало пути",
-    price: "300 000",
+    price: "280 000",
     url: "https://watbot.ru/w/B3pT",
     features: [
       "Детокс от гаджетов и шума",
@@ -86,7 +86,7 @@ const prices = [
   {
     days: "5 дней",
     title: "Трансформация",
-    price: "500 000",
+    price: "480 000",
     url: "https://watbot.ru/w/B3pV",
     features: [
       "Всё из 3-дневного формата",
@@ -103,7 +103,7 @@ const prices = [
   {
     days: "7 дней",
     title: "Полное возвращение",
-    price: "700 000",
+    price: "680 000",
     url: "https://watbot.ru/w/B3pW",
     features: [
       "Всё из 5-дневного формата",
